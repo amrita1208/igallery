@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="image.css">
+
+    <script>
+        const gallery = [
+            { src: "v1.jpg", caption: "JOSEPH VIJAY" },
+            { src: "sk.jpg", caption: "SIVA KARTHIKEYAN" },
+            { src: "pr.jpg", caption: "PRADEEP RANGANATHAN" },
+            { src: "vishal.jpg", caption: "VISHAL" },
+            { src: "dhanush.jpg", caption: "DHANUSH" },
+            { src: "jeeva.jpg", caption: "JEEVA" }
+        ];
+
+        let index = 0;
+
+        function updateImage()
+         {
+            document.getElementById("img").src = gallery[index].src;
+            document.getElementById("text").innerHTML = gallery[index].caption;
+        }
+
+        function next()
+         {
+            index++;
+            if(index >= gallery.length){
+               index = 0;
+             }
+            updateImage();
+        }
+
+        function previous()
+         {
+            index--;
+            if(index < 0){
+               index = gallery.length - 1;
+            }
+            updateImage();
+        }
+    </script>
+</head>
+<body>
+    <div class="title">
+        <h1><b>INTERACTIVE IMAGE GALLERY</b></h1>
+    </div>
+    <div class="allign">
+        <div class="image">
+            <img id="img" src="v1.jpg" alt="Gallery Image">
+            <h2 id="text">JOSEPH VIJAY</h2>
+            <div class="button1">
+                <button onclick="previous()">Previous</button>
+                <button onclick="next()">Next</button>
+            </div>
+        </div>
+    </div>
+    <footer class="copyrights">
+        <p>Designed and developed by &copy; M AMRITA (25011865)</p>
+    </footer>
+</body>
+</html>
+
+
