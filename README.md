@@ -171,7 +171,7 @@ button:hover {
     text-align: center;
     left: 0;
 }
-
+```
 
 ## OUTPUT:
 
@@ -182,7 +182,6 @@ button:hover {
 ![alt text](image-5.png)
 ![alt text](image-6.png)
 
-```
 
 ## RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
